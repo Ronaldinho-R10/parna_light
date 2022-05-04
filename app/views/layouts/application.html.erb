@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Light Web</title>
+ <%= stylesheet_link_tag 'application', media: 'all', 'dataturbolinks-track' => true %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' =>
+true %>
+ <%= csrf_meta_tags %>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container rounded-corners">
+<%= yield %>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+</html>

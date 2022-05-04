@@ -1,0 +1,48 @@
+<%= form_with(model: local) do |form| %>
+  <% if local.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(local.errors.count, "error") %> prohibited this local from being saved:</h2>
+
+      <ul>
+        <% local.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="form-group">
+    <%= form.label :bairro %>
+    <%= form.text_field :bairro, class:"form-control", placeholder:"Próximo a..." %>
+  </div>
+
+
+  <div class="form-group">
+    <%= form.label :rua %>
+    <%= form.text_field :rua, class:"form-control", placeholder:"Rua..." %>
+  </div>
+
+
+
+ <div class="form-group">
+    <%= form.label :referencia %>
+    <%= form.text_field :referencia, class:"form-control", placeholder:"Próximo a..." %>
+  </div>
+
+   <div class="form-group">
+    <%= form.label :logradouro %>
+    <%= form.text_field :logradouro, class:"form-control", placeholder:"Insira um logradouro" %>
+  </div>
+
+<!---->
+   <div class="form-group">
+    <%= form.label :numero %>
+    <%= form.text_field :numero, class:"form-control", placeholder:"Número da casa" %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit nil, class:"btn btn-primary"  %>
+  </div>
+<% end %>

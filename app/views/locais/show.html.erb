@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<form>
+
+  <div class="form-group">
+    <%= text_field_tag nil, @local.bairro, class:"form-control", disabled: true %>
+  </div>
+
+   <div class="form-group">
+    <%= text_field_tag nil, @local.referencia, class:"form-control", disabled: true %>
+  </div>
+
+  
+  
+</form>
+
+<div>
+  <%= link_to "Editar Local", edit_local_path(@local), class: "btn btn-warning" %> <span style = "color: #FCF545">|</span>
+  <%= link_to "Voltar", locais_path, class: "btn btn-success" %> <span style = "color: #FCF545">|</span>
+  <%= button_path%>
+  <br>
+  <br>
+
+  <%= button_to "Destroy this local", @local, method: :delete, class: "btn btn-danger" %>
+</div>

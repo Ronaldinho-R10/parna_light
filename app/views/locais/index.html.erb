@@ -1,0 +1,10 @@
+<% if notice.present? %>
+ <div id="notice" class="alert alert-success" role="alert"><%=
+notice %></div>
+<% end %>
+
+<h1>Locais</h1>
+ <p>Nenhuma Registro de Local Encontrado</p>
+ <div class="float-md-left">
+ <%= link_to 'Novo Endereço', new_local_path, class: "btn btn-primary" %>
+ </div>
